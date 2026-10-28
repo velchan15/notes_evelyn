@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dear God // Evelyn Anastasia – Ruang Teduh & Curahan Hati</title>
+  <meta name="description" content="Jurnal pribadi dan ruang saat teduh Evelyn Anastasia bersama Tuhan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Cinzel:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ========================================================
+   Y2K CYBER-EDITORIAL / SECTION-BASED ARCHITECTURE
+   ======================================================== */
+    :root {
+      --bg-satin: #e9e8ec;
+      --paper-white: #ffffff;
+      --dark-frame: #0d0d0f;
+      --dark-sub: #17171c;
+      --border-dark: #1b1b22;
+      --ink-primary: #0a0a0f;
+      --ink-muted: #6b6b7a;
+      --ink-light: #ececf2;
+      --cyber-red: #ff334b;
+      --cyber-accent: #7b3ff0;
+      --font-head: "Bricolage Grotesque", -apple-system, sans-serif;
+      --font-serif: "Newsreader", "Times New Roman", Georgia, serif;
+      --font-cinzel: "Cinzel", serif;
+      --font-mono: "Space Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 0%, #f7f7fa 0%, #e5e4ea 50%, #d8d7df 100%);
+      color: var(--ink-primary);
+      font-family: var(--font-head);
+      min-height: 100vh;
+      padding: 1.2rem 0.8rem 3rem;
+      overflow-x: hidden;
+      background-attachment: fixed;
+    }
+
+    /* Background draped silk ripple effect */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 40% at 20% 30%, rgba(255, 255, 255, 0.7) 0%, transparent 70%),
+        radial-gradient(ellipse 70% 50% at 80% 70%, rgba(215, 214, 224, 0.5) 0%, transparent 70%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.03) 100%);
+      z-index: -1;
+    }
+
+    /* Main Magazine Canvas */
+    .editorial-canvas {
+      width: min(940px, 100%);
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    /* ---------------- Top Pill Navbar with Section Switcher ---------------- */
+    .nav-pill-wrapper {
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0.8rem;
+      z-index: 200;
+    }
+
+    .nav-pill {
+      background: #000;
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.45rem 0.8rem 0.45rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 95vw;
+    }
+
+    .nav-brand {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-tabs {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      background: transparent;
+      color: #a8a8b8;
+      border: 0;
+      border-radius: 999px;
+      font-family: var(--font-head);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .tab-btn.active {
+      background: #fff;
+      color: #000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .tab-btn.btn-write-highlight {
+      color: #ffb3ba;
+    }
+
+    .tab-btn.btn-write-highlight.active {
+      background: var(--cyber-red);
+      color: #fff;
+    }
+
+    /* ---------------- SECTION PANES ARCHITECTURE ---------------- */
+    .section-pane {
+      display: none;
+      flex-direction: column;
+      gap: 1.4rem;
+      animation: fadeInPane 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .section-pane.active {
+      display: flex;
+    }
+
+    @keyframes fadeInPane {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------------- SECTION 1: COVER / OVERVIEW ---------------- */
+    /* Cyber Header Widgets */
+    .cyber-header-row {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 760px) {
+      .cyber-header-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cyber-quick-card {
+      background: #000;
+      color: #fff;
+      border-radius: 20px;
+      padding: 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      border: 1px solid #222;
+    }
+
+    .cyber-quick-btn {
+      background: transparent;
+      border: 0;
+      color: #fff;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      padding: 0.4rem 0.4rem;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .cyber-quick-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .cyber-quick-btn.highlight {
+      color: var(--cyber-red);
+      font-weight: 700;
+    }
+
+    .cyber-ticket-bar {
+      background: #000;
+      color: #fff;
+      border-radius: 20px;
+      padding: 0.9rem 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      border: 1px solid #2a2a2a;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .ticket-qr {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .qr-dummy {
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      color: #000;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 2px;
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    .qr-dummy i {
+      background: #000;
+      border-radius: 1px;
+    }
+
+    .qr-dummy i:nth-child(even) {
+      background: transparent;
+    }
+
+    .qr-dummy i:nth-child(3),
+    .qr-dummy i:nth-child(7),
+    .qr-dummy i:nth-child(10) {
+      background: #000;
+    }
+
+    .ticket-info {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      line-height: 1.4;
+    }
+
+    .ticket-info .tag {
+      color: var(--cyber-red);
+      font-weight: 700;
+    }
+
+    .ticket-tech-center {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+    }
+
+    .badge-future {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+    }
+
+    .ticket-arrows {
+      color: #888;
+      font-weight: 700;
+      letter-spacing: -0.1em;
+    }
+
+    .ticket-brand {
+      background: #fff;
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      letter-spacing: 0.1em;
+    }
+
+    /* Editorial Stage (Dark Box) */
+    .stage-dark-card {
+      background: var(--dark-frame);
+      color: #fff;
+      border-radius: 20px;
+      border: 2px solid #000;
+      padding: clamp(1.2rem, 3.5vw, 2.2rem);
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 820px) {
+      .stage-dark-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stage-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .portrait-frame {
+      position: relative;
+      border: 2px solid #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #111;
+      max-width: 320px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .meta-credits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #a0a0ad;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #24242e;
+      padding-bottom: 0.7rem;
+    }
+
+    .meta-credits b {
+      color: #fff;
+    }
+
+    .story-paragraphs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #d2d0e0;
+    }
+
+    .story-paragraphs .fr {
+      font-style: italic;
+      color: #9f9dad;
+      font-size: 0.86rem;
+    }
+
+    .dress-code-banner {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+
+    .dress-code-banner span {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .stage-right {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .vertical-japanese {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.4em;
+      color: #8b8b99;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.5rem 0;
+      text-transform: uppercase;
+    }
+
+    .vertical-japanese .jp-kanji {
+      font-size: 1.15rem;
+      color: #fff;
+      letter-spacing: 0.2em;
+    }
+
+    .receipt-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dispenser-slot {
+      width: 100%;
+      max-width: 280px;
+      height: 24px;
+      background: linear-gradient(180deg, #dcdde3 0%, #a8a9b2 60%, #858690 100%);
+      border-radius: 8px 8px 4px 4px;
+      border: 1px solid #fff;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .dispenser-mouth {
+      width: 82%;
+      height: 4px;
+      background: #111;
+      border-radius: 999px;
+      box-shadow: inset 0 2px 3px #000;
+    }
+
+    .receipt-paper {
+      width: 100%;
+      max-width: 260px;
+      background: #fff;
+      color: #000;
+      padding: 1.2rem 1rem 1.6rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 10px),
+          95% 100%, 90% calc(100% - 10px),
+          85% 100%, 80% calc(100% - 10px),
+          75% 100%, 70% calc(100% - 10px),
+          65% 100%, 60% calc(100% - 10px),
+          55% 100%, 50% calc(100% - 10px),
+          45% 100%, 40% calc(100% - 10px),
+          35% 100%, 30% calc(100% - 10px),
+          25% 100%, 20% calc(100% - 10px),
+          15% 100%, 10% calc(100% - 10px),
+          5% 100%, 0% calc(100% - 10px));
+      animation: receiptDrop 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes receiptDrop {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .binder-clip {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      width: 28px;
+      height: 20px;
+      background: #111;
+      border-radius: 4px;
+      border: 2px solid #888;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .stamp-card {
+      border: 1px solid #111;
+      padding: 0.65rem;
+      background: #fafafc;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .stamp-card:hover {
+      transform: scale(1.02);
+      background: #f0f0f8;
+    }
+
+    .stamp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      border-bottom: 1px dashed #bbb;
+      padding-bottom: 0.25rem;
+    }
+
+    .stamp-title {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-style: italic;
+      font-size: 0.88rem;
+      line-height: 1.25;
+    }
+
+    .stamp-body {
+      font-size: 0.74rem;
+      color: #444;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .stamp-barcode {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.25em;
+      color: #888;
+      text-align: center;
+      margin-top: 0.25rem;
+    }
+
+    /* ---------------- SECTION 2: JOURNAL & REFLECTIONS ---------------- */
+    .services-strip {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #dcdbe3;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    @media (max-width: 680px) {
+      .services-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .service-box {
+      padding: 1.2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.45rem;
+      border-right: 1px solid #eee;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      background: #fff;
+    }
+
+    .service-box:last-child {
+      border-right: none;
+    }
+
+    .service-box:hover,
+    .service-box.aktif {
+      background: #0d0d0f;
+      color: #fff;
+    }
+
+    .service-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid currentColor;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .service-num {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .service-box:hover .service-num,
+    .service-box.aktif .service-num {
+      color: #aaa;
+    }
+
+    .service-title {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .service-sub {
+      font-size: 0.72rem;
+      line-height: 1.35;
+      color: #777;
+      max-width: 22ch;
+    }
+
+    .service-box:hover .service-sub,
+    .service-box.aktif .service-sub {
+      color: #bbb;
+    }
+
+    .filter-search-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 0.85rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid #dcdbe3;
+    }
+
+    .search-input-box {
+      flex: 1;
+      min-width: 240px;
+      position: relative;
+    }
+
+    .search-input-box input {
+      width: 100%;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      padding: 0.55rem 1rem 0.55rem 2.2rem;
+      border: 1px solid #ccc;
+      border-radius: 999px;
+      background: #fbfbfe;
+      color: #000;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input-box input:focus {
+      border-color: #000;
+    }
+
+    .search-input-box::before {
+      content: "🔍";
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    .theme-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .chip-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid #111;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .chip-btn.aktif,
+    .chip-btn:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .editorial-card {
+      background: #fff;
+      border: 2px solid #111;
+      border-radius: 12px;
+      padding: 1.3rem 1.2rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 4px 4px 0px #111;
+    }
+
+    .editorial-card:hover {
+      transform: translateY(-3px) translateX(-2px);
+      box-shadow: 7px 7px 0px #111;
+    }
+
+    .card-stamp-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-bottom: 2px solid #111;
+      padding-bottom: 0.4rem;
+    }
+
+    .card-theme-tag {
+      background: #111;
+      color: #fff;
+      padding: 0.15rem 0.6rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+    }
+
+    .card-bacaan {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #000;
+    }
+
+    .card-judul {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      color: #222;
+    }
+
+    .card-verse-quote {
+      font-family: var(--font-serif);
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: #444;
+      border-left: 3px solid #111;
+      padding-left: 0.65rem;
+      margin: 0.2rem 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      border-top: 1px dashed #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #888;
+    }
+
+    /* ---------------- SECTION 3: TULIS / WRITE STUDIO ---------------- */
+    .write-studio-card {
+      background: #fff;
+      border: 2px solid #000;
+      border-radius: 18px;
+      box-shadow: 6px 6px 0px #000;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .studio-header {
+      background: #000;
+      color: #fff;
+      padding: 1.2rem 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .studio-body {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #111;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      border: 2px solid #000;
+      border-radius: 8px;
+      background: #fff;
+      color: #000;
+      outline: none;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      box-shadow: 3px 3px 0px #000;
+    }
+
+    .btn-submit-studio {
+      background: #000;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1.1rem;
+      border: 2px solid #000;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 4px 4px 0px var(--cyber-red);
+      margin-top: 0.8rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-submit-studio:hover {
+      transform: translateY(-2px) translateX(-2px);
+      box-shadow: 6px 6px 0px var(--cyber-red);
+    }
+
+    /* ---------------- SECTION 4: LOOKBOOK / KOLEKSI ---------------- */
+    .middle-banner-card {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid #000;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      background: #000;
+      position: relative;
+    }
+
+    .middle-banner-card img {
+      width: 100%;
+      height: auto;
+      max-height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .banner-caption {
+      position: absolute;
+      bottom: 0.8rem;
+      left: 1.2rem;
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .bottom-editorial-card {
+      background: #fff;
+      border: 2px solid #000;
+      border-radius: 16px;
+      padding: 2.5rem 2rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 680px) {
+      .bottom-editorial-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bottom-left h3 {
+      font-family: var(--font-cinzel);
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .bottom-left h4 {
+      font-family: var(--font-cinzel);
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-top: 0.8rem;
+      color: #333;
+    }
+
+    .bottom-right {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      line-height: 1.65;
+      color: #555;
+      border-left: 1px solid #ddd;
+      padding-left: 1.2rem;
+    }
+
+    .bottom-right b {
+      color: #000;
+    }
+
+    .corner-peel {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 75px;
+      height: 75px;
+      background: linear-gradient(135deg, transparent 50%, #c4c4c8 50%, #ffffff 58%, #f0eff5 100%);
+      box-shadow: -5px -5px 12px rgba(0, 0, 0, 0.18);
+      pointer-events: none;
+    }
+
+    /* ---------------- READER MODAL (Detail View) ---------------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 15, 0.78);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      width: min(640px, 100%);
+      max-height: 90vh;
+      background: #fff;
+      color: #000;
+      border-radius: 18px;
+      border: 3px solid #000;
+      box-shadow: 10px 10px 0px #000;
+      overflow-y: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header-cyber {
+      background: #000;
+      color: #fff;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #000;
+    }
+
+    .modal-title-text {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .btn-close-modal {
+      background: #fff;
+      color: #000;
+      border: 0;
+      border-radius: 999px;
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-close-modal:hover {
+      background: var(--cyber-red);
+      color: #fff;
+    }
+
+    .modal-body {
+      padding: 1.5rem 1.6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .read-top-meta {
+      background: #fafafc;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .read-bacaan-big {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+
+    .read-quote-box {
+      background: #0d0d0f;
+      color: #fff;
+      padding: 1.2rem;
+      border-radius: 10px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.45;
+      border-left: 6px solid var(--cyber-red);
+    }
+
+    .read-renungan-content {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .read-notes-bullet {
+      background: #f7f7fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.1rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    .read-notes-bullet h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      color: #777;
+    }
+
+    .read-notes-bullet ul {
+      padding-left: 1.2rem;
+    }
+
+    .read-notes-bullet li+li {
+      margin-top: 0.35rem;
+    }
+
+    .btn-delete-entry {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #b91c1c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      align-self: flex-start;
+      margin-top: 1rem;
+      transition: background 0.15s;
+    }
+
+    .btn-delete-entry:hover {
+      background: #fecaca;
+    }
+
+    /* ---------------- Aesthetic Toast ---------------- */
+    .toast-msg {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: #000;
+      color: #fff;
+      border: 2px solid var(--cyber-red);
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      z-index: 10000;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="editorial-canvas">
+
+    <!-- TOP CAPSULE NAVBAR WITH SECTION TABS -->
+    <div class="nav-pill-wrapper">
+      <nav class="nav-pill">
+        <div class="nav-brand">DEAR GOD // EVELYN</div>
+        <div class="nav-tabs" id="navTabs">
+          <button type="button" class="tab-btn active" data-target="sec-cover">
+            <span>⌂</span> Ruang Teduh
+          </button>
+          <button type="button" class="tab-btn" data-target="sec-journal">
+            <span>📖</span> Catatan
+          </button>
+          <button type="button" class="tab-btn btn-write-highlight" data-target="sec-tulis">
+            <span>✍️</span> + Tulis Isi Hati
+          </button>
+          <button type="button" class="tab-btn" data-target="sec-lookbook">
+            <span>✦</span> Janji Tuhan
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ========================================================
+       SECTION 1: COVER / OVERVIEW (FOKUS PANGGUNG EDITORIAL)
+       ======================================================== -->
+    <section class="section-pane active" id="sec-cover">
+      <!-- Cyber Header Row -->
+      <div class="cyber-header-row">
+        <div class="cyber-quick-card">
+          <button type="button" class="cyber-quick-btn highlight" onclick="switchSection('sec-tulis')">
+            <span>✍️</span> Tulis
+          </button>
+          <button type="button" class="cyber-quick-btn" onclick="openNoteReader(0)">
+            <span>🕊️</span> Ayat Pegangan Hari Ini
+          </button>
+          <button type="button" class="cyber-quick-btn" onclick="switchSection('sec-journal')">
+            <span>📖</span> Buka Seluruh Jurnal
+          </button>
+        </div>
+
+        <div class="cyber-ticket-bar">
+          <div class="ticket-qr">
+            <div class="qr-dummy">
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="ticket-info">
+              <div>GRACE // <span class="tag">UNCONDITIONAL</span></div>
+              <div>DATE: <span id="ticketDateDisplay">2026.10.28</span></div>
+            </div>
+          </div>
+          <div class="ticket-tech-center">
+            <span class="badge-future">HEART & SOUL</span>
+            <span class="ticket-arrows">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+          </div>
+          <div class="ticket-brand">39 ••• EVELYN ANASTASIA</div>
+        </div>
+      </div>
+
+      <!-- Dark Editorial Showcase -->
+      <div class="stage-dark-card">
+        <div class="stage-left">
+          <div class="portrait-frame">
+            <img src="assets/img/3.jpg" alt="Editorial Portrait"
+              onerror="this.src='https://id.pinterest.com/pin/1094445146978154239/'">
+          </div>
+
+          <div class="meta-credits">
+            <div>HEART TO GOD<br><b>Curahan Hati Evelyn</b></div>
+            <div>SOLI DEO GLORIA<br><b>Tempat Berdiam Diri</b></div>
+          </div>
+
+          <div class="story-paragraphs">
+            <p class="fr">
+              « Di ruang kecil ini, aku meletakkan bisingnya dunia. Membaca firman-Nya perlahan, menguraikan cemas
+              menjadi doa, dan menumpahkan seluruh isi hati tanpa perlu berpura-pura kuat. »
+            </p>
+            <p class="id">
+              Setiap firman ditulis pelan-pelan satu ayat setiap kali, menyatukan kedamaian dan ketenangan batin dalam
+              jurnal pribadi Evelyn bersama Tuhan.
+            </p>
+          </div>
+
+          <div class="dress-code-banner">
+            <div>MAZMUR 62:8 // <span>CURAHKANLAH ISI HATIMU DI HADAPAN-NYA</span></div>
+            <div><span>ALLAH ADALAH TEMPAT PERLINDUNGAN KITA</span></div>
+          </div>
+        </div>
+
+        <div class="stage-right">
+          <div class="vertical-japanese">
+            <span class="jp-kanji">祈りと平安</span>
+            <span>Walk with God</span>
+          </div>
+
+          <div class="receipt-wrapper">
+            <div class="dispenser-slot">
+              <div class="dispenser-mouth"></div>
+            </div>
+
+            <div class="receipt-paper" id="receiptPaper">
+              <div class="binder-clip"></div>
+              <div
+                style="font-family:var(--font-mono);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-align:center;border-bottom:1px solid #000;padding-bottom:0.4rem;">
+                LEMBAR PERCAKAPAN DENGAN TUHAN
+              </div>
+              <!-- Top latest notes injected here -->
+              <div id="receiptStampsList" style="display:flex;flex-direction:column;gap:0.75rem;"></div>
+              <button type="button" onclick="switchSection('sec-journal')"
+                style="background:#000;color:#fff;border:0;padding:0.5rem;border-radius:4px;font-family:var(--font-mono);font-size:0.7rem;font-weight:700;cursor:pointer;">
+                👁️ BUKA JURNAL LENGKAP →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+       SECTION 2: JOURNAL & DAFTAR CATATAN
+       ======================================================== -->
+    <section class="section-pane" id="sec-journal">
+      <!-- 4 Theme Strip -->
+      <div class="services-strip">
+        <div class="service-box" data-filter="Kasih">
+          <div class="service-icon">🔔</div>
+          <div class="service-num">Theme 01</div>
+          <div class="service-title">Kasih</div>
+          <div class="service-sub">Khotbah di bukit, mengasihi tanpa batas</div>
+        </div>
+        <div class="service-box" data-filter="Damai">
+          <div class="service-icon">✈️</div>
+          <div class="service-num">Theme 02</div>
+          <div class="service-title">Damai</div>
+          <div class="service-sub">Filipi 4:6, mengubah cemas jadi doa</div>
+        </div>
+        <div class="service-box" data-filter="Iman">
+          <div class="service-icon">💬</div>
+          <div class="service-num">Theme 03</div>
+          <div class="service-title">Iman</div>
+          <div class="service-sub">Ibrani 11:1, percaya sebelum melihat</div>
+        </div>
+        <div class="service-box" data-filter="Syukur">
+          <div class="service-icon">⚙️</div>
+          <div class="service-num">Theme 04</div>
+          <div class="service-title">Syukur</div>
+          <div class="service-sub">Mazmur 103, jangan lupa kebaikan-Nya</div>
+        </div>
+      </div>
+
+      <!-- Search & Chips -->
+      <div class="filter-search-container">
+        <div class="search-input-box">
+          <input type="text" id="searchInput" placeholder="Cari firman, curhatan hati, atau kata kunci..."
+            aria-label="Search notes">
+        </div>
+        <div class="theme-chips" id="themeChips">
+          <button class="chip-btn aktif" data-tema="Semua">ALL</button>
+          <button class="chip-btn" data-tema="Kasih">KASIH</button>
+          <button class="chip-btn" data-tema="Damai">DAMAI</button>
+          <button class="chip-btn" data-tema="Iman">IMAN</button>
+          <button class="chip-btn" data-tema="Syukur">SYUKUR</button>
+          <button class="chip-btn" data-tema="Harapan">HARAPAN</button>
+          <button class="chip-btn" data-tema="Pengampunan">PENGAMPUNAN</button>
+        </div>
+      </div>
+
+      <!-- All Cards Grid -->
+      <div class="notes-grid" id="notesGrid"></div>
+    </section>
+
+    <!-- ========================================================
+       SECTION 3: WRITE STUDIO (INPUT LANGSUNG TANPA POPUP)
+       ======================================================== -->
+    <section class="section-pane" id="sec-tulis">
+      <div class="write-studio-card">
+        <div class="studio-header">
+          <div>✍️ PERCAKAPAN AKU DENGAN TUHAN</div>
+          <div style="font-size:0.75rem; color:#aaa;">HATI YANG JUJUR DI HADAPAN-NYA</div>
+        </div>
+        <form class="studio-body" id="sectionNoteForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tanggal</label>
+              <input type="date" name="tanggal" id="secTanggal" required>
+            </div>
+            <div class="form-group">
+              <label>Tema Pergumulan / Renungan</label>
+              <select name="tema" id="secTema" required>
+                <option value="Kasih">Kasih</option>
+                <option value="Damai">Damai</option>
+                <option value="Iman">Iman</option>
+                <option value="Syukur">Syukur</option>
+                <option value="Harapan">Harapan</option>
+                <option value="Pengampunan">Pengampunan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ayat / Bacaan Hari Ini</label>
+              <input type="text" name="bacaan" id="secBacaan" placeholder="Contoh: Mazmur 23 atau Filipi 4" required>
+            </div>
+            <div class="form-group">
+              <label>Judul Curhatan / Renungan</label>
+              <input type="text" name="judul" id="secJudul"
+                placeholder="Contoh: Tuhan, hari ini hatiku cemas tapi aku percaya janji-Mu" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Alamat Ayat Pegangan (Opsional)</label>
+              <input type="text" name="kunci" id="secKunci" placeholder="Contoh: Filipi 4:6">
+            </div>
+            <div class="form-group">
+              <label>Bunyi Ayat yang Menguatkan (Opsional)</label>
+              <input type="text" name="teks" id="secTeks"
+                placeholder="Contoh: Janganlah hendaknya kamu kuatir tentang apapun juga...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Isi Curhatan & Renungan</label>
+            <textarea name="renungan" id="secRenungan" rows="5"
+              placeholder="Tumpahkan apa yang sedang kamu rasakan, alami, dan renungkan dari firman-Nya hari ini (pisahkan paragraf dengan baris baru)..."
+              required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Doa Pribadi / Komitmen (Opsional)</label>
+            <textarea name="catatan" id="secCatatan" rows="3"
+              placeholder="Doa kecil atau komitmen praktis yang ingin kamu bawa kepada Tuhan..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-studio" id="secBtnSubmit">
+            💾 SIMPAN KE JURNAL DOA // AMIN
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========================================================
+       SECTION 4: LOOKBOOK / KOLEKSI
+       ======================================================== -->
+    <section class="section-pane" id="sec-lookbook">
+      <div class="middle-banner-card">
+        <img src="assets/img/2.jpg" alt="Aesthetic Banner"
+          onerror="this.src='https://id.pinterest.com/pin/5559199538701865/'">
+        <div class="banner-caption">Evelyn Anastasia // In His Presence</div>
+      </div>
+
+      <footer class="bottom-editorial-card">
+        <div class="bottom-left">
+          <h3>PROMISES</h3>
+          <h4>UNFAILING LOVE & GRACE</h4>
+        </div>
+        <div class="bottom-right">
+          <div>Penulis : <b>Evelyn Anastasia</b></div>
+          <div>Jurnal : <b>Ruang Teduh & Curahan Hati Pribadi</b></div>
+          <div>Tujuan : <b>Meletakkan beban, merenungkan firman, mengingat kebaikan-Nya</b></div>
+          <div style="margin-top:0.6rem;opacity:0.7;">2026 © Soli Deo Gloria. Walk with His grace.</div>
+        </div>
+        <!-- Dog-Ear Curled Corner -->
+        <div class="corner-peel"></div>
+      </footer>
+    </section>
+
+  </div>
+
+  <!-- ========================================================
+     MODAL BACA DETAIL CATATAN
+     ======================================================== -->
+  <div class="modal-overlay" id="modalReadOverlay">
+    <div class="modal-box">
+      <div class="modal-header-cyber">
+        <div class="modal-title-text" id="readModalTitleHeader">BACA CATATAN</div>
+        <button type="button" class="btn-close-modal" id="btnCloseReadModal">✕</button>
+      </div>
+      <div class="modal-body" id="readModalBody">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST POPUP NOTIFICATION -->
+  <div class="toast-msg" id="toastMsg">[ OK ] Catatan berhasil disimpan! ✨</div>
+
+  <!-- ========================================================
+     JAVASCRIPT LOGIC
+     ======================================================== -->
+  <script>
+    const DEFAULT_NOTES = [
+      {
+        tanggal: "2026-10-27", tema: "Damai",
+        bacaan: "Filipi 4",
+        kunci: "Filipi 4:6", teks: "Janganlah hendaknya kamu kuatir tentang apapun juga.",
+        judul: "Khawatir yang diubah jadi doa",
+        renungan: [
+          "Hari ini banyak hal yang belum selesai, dan kepala rasanya penuh. Pasal ini tidak bilang khawatir itu salah, tapi mengajak kita membawanya ke tempat yang tepat.",
+          "Doa bukan cara pura-pura tenang. Doa adalah tempat menaruh beban satu per satu sampai tangan kita kosong lagi."
+        ],
+        catatan: ["Tulis tiga hal yang bikin cemas, lalu doakan satu per satu.", "Perhatikan kata “dalam segala hal”: tidak ada urusan yang terlalu kecil."]
+      },
+      {
+        tanggal: "2026-10-25", tema: "Kasih",
+        bacaan: "Matius 5–7",
+        judul: "Tiga pasal, satu cara hidup",
+        kunci: "Matius 6:33", teks: "Tetapi carilah dahulu Kerajaan Allah dan kebenarannya.",
+        renungan: [
+          "Membaca tiga pasal sekaligus membuat pesannya terasa utuh: Yesus tidak cuma memberi aturan, tapi menunjukkan hati yang melatarbelakanginya.",
+          "Dari ucapan bahagia sampai dua dasar rumah, semuanya menanyakan hal yang sama: aku mendengar, lalu melakukan atau tidak?"
+        ],
+        catatan: ["Matius 5: kasih sampai ke musuh, ini yang paling menantang.", "Matius 6: doa dan harta, dua-duanya soal hati.", "Matius 7: bangun di atas batu, bukan sekadar tahu."]
+      },
+      {
+        tanggal: "2026-10-24", tema: "Syukur",
+        bacaan: "Mazmur 103",
+        kunci: "Mazmur 103:2", teks: "Pujilah TUHAN, hai jiwaku, dan janganlah lupakan segala kebaikan-Nya!",
+        judul: "Daftar kebaikan yang gampang lupa",
+        renungan: [
+          "Pemazmur menyuruh jiwanya sendiri mengingat. Ternyata bersyukur memang perlu dilatih, bukan muncul otomatis.",
+          "Hari ini aku coba menyebut kebaikan Tuhan satu per satu, dan daftarnya lebih panjang dari yang kukira."
+        ],
+        catatan: ["Mazmur 103:2 jadi pengingat: jangan lupakan segala kebaikan-Nya.", "Target minggu ini: tulis tiga rasa syukur tiap malam."]
+      },
+      {
+        tanggal: "2026-10-20", tema: "Pengampunan",
+        bacaan: "Efesus 4–5",
+        kunci: "Efesus 4:32", teks: "saling mengampuni, sebagaimana Allah di dalam Kristus telah mengampuni kamu.",
+        judul: "Mengampuni karena sudah lebih dulu diampuni",
+        renungan: [
+          "Mengampuni terasa berat kalau menunggu perasaan siap. Paulus memberi alasan lain: kita mengampuni karena kita sendiri sudah menerima pengampunan.",
+          "Itu tidak menghapus rasa sakit, tapi mengubah arah hati dari membalas menjadi melepaskan."
+        ],
+        catatan: ["Siapa yang masih ada di daftar “belum aku maafkan”?", "Doa: minta kekuatan untuk melepaskan, bukan untuk melupakan."]
+      },
+      {
+        tanggal: "2026-10-15", tema: "Iman",
+        bacaan: "Ibrani 11",
+        kunci: "Ibrani 11:1", teks: "Iman adalah dasar dari segala sesuatu yang kita harapkan.",
+        judul: "Percaya sebelum melihat",
+        renungan: [
+          "Satu pasal penuh nama-nama yang melangkah tanpa melihat hasilnya. Iman bukan perasaan yakin tanpa alasan, tapi berpijak pada janji Tuhan.",
+          "Kadang langkah iman sesederhana tetap rajin, tetap berdoa, tetap melakukan bagianku."
+        ],
+        catatan: ["Satu hal yang sedang kutunggu jawabannya dari Tuhan.", "Nama mana di pasal ini yang paling kupahami situasinya?"]
+      },
+      {
+        tanggal: "2026-10-05", tema: "Harapan",
+        bacaan: "Mazmur 23",
+        kunci: "Mazmur 23:1", teks: "TUHAN adalah gembalaku, takkan kekurangan aku.",
+        judul: "Cukup, karena Gembalaku",
+        renungan: [
+          "Daud menulis ini bukan dari tempat yang nyaman. Ia tahu rasanya dikejar dan diliputi bahaya, tapi tetap berkata: aku tidak kekurangan.",
+          "Harapan tumbuh dari mengenal siapa yang menuntun, bukan dari seberapa jelas jalannya."
+        ],
+        catatan: ["Baca seluruh pasal ini pelan-pelan, dua kali.", "Apa arti “cukup” bagiku saat ini?"]
+      }
+    ];
+
+    const STORAGE_KEY = "NOTES_AKU_EDITORIAL_V1";
+
+    function loadNotes() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      return [...DEFAULT_NOTES];
+    }
+
+    let notesList = loadNotes().sort((a, b) => b.tanggal.localeCompare(a.tanggal));
+
+    function persistNotes() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(notesList));
+    }
+
+    function formatTgl(isoStr) {
+      try {
+        const d = new Date(isoStr + "T00:00");
+        return d.toLocaleDateString("id-ID", { day: "numeric", month: "short", year: "numeric" });
+      } catch {
+        return isoStr;
+      }
+    }
+
+    /* ========================================================
+       SECTION TAB SWITCHER LOGIC
+       ======================================================== */
+    function switchSection(targetId) {
+      // Update Tab buttons
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.target === targetId);
+      });
+
+      // Update Section Panes
+      document.querySelectorAll(".section-pane").forEach(pane => {
+        pane.classList.toggle("active", pane.id === targetId);
+      });
+
+      // Smooth scroll to top of pane
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        switchSection(btn.dataset.target);
+      });
+    });
+
+    /* ========================================================
+       RENDER RECEIPT & ALL NOTES
+       ======================================================== */
+    function renderReceiptStamps() {
+      const container = document.getElementById("receiptStampsList");
+      const topNotes = notesList.slice(0, 3);
+      container.innerHTML = topNotes.map(n => `
+    <div class="stamp-card" onclick="openNoteReader(${notesList.indexOf(n)})">
+      <div class="stamp-header">
+        <span>${n.bacaan}</span>
+        <span>${n.tanggal.replace(/-/g, '.')}</span>
+      </div>
+      <div class="stamp-title">${n.judul}</div>
+      <div class="stamp-body">${(n.renungan && n.renungan[0]) || ""}</div>
+      <div class="stamp-barcode">|||| | ||||| | ||| ${n.tema.toUpperCase()}</div>
+    </div>
+  `).join("");
+    }
+
+    let activeFilter = "Semua";
+    let searchQuery = "";
+
+    function renderNotesGrid() {
+      const grid = document.getElementById("notesGrid");
+      const filtered = notesList.filter(n => {
+        const matchFilter = (activeFilter === "Semua" || n.tema.toLowerCase() === activeFilter.toLowerCase());
+        const q = searchQuery.toLowerCase().trim();
+        const matchSearch = !q || [n.judul, n.bacaan, n.kunci || "", n.teks || "", n.tema, ...(n.renungan || []), ...(n.catatan || [])].join(" ").toLowerCase().includes(q);
+        return matchFilter && matchSearch;
+      });
+
+      if (!filtered.length) {
+        grid.innerHTML = `
+      <div style="grid-column: 1/-1; background:#fff; padding:3rem; border:2px dashed #000; border-radius:12px; text-align:center;">
+        <h3 style="font-family:var(--font-mono); font-size:1.1rem; text-transform:uppercase;">Tidak ada catatan yang cocok</h3>
+        <p style="color:#777; margin-top:0.4rem;">Coba ganti filter atau tambahkan catatan barumu!</p>
+        <button type="button" class="btn-submit-studio" style="margin-top:1rem; display:inline-block; padding:0.6rem 1.4rem;" onclick="switchSection('sec-tulis')">
+          + TULIS SEKARANG
+        </button>
+      </div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(n => {
+        const originalIdx = notesList.indexOf(n);
+        return `
+      <article class="editorial-card" onclick="openNoteReader(${originalIdx})">
+        <div class="card-stamp-top">
+          <span>${n.tanggal.replace(/-/g, '.')}</span>
+          <span class="card-theme-tag">${n.tema}</span>
+        </div>
+        <div class="card-bacaan">${n.bacaan}</div>
+        <div class="card-judul">${n.judul}</div>
+        ${n.teks ? `<blockquote class="card-verse-quote">“${n.teks}”</blockquote>` : `<p style="font-size:0.85rem;color:#555;">${(n.renungan && n.renungan[0]) || ""}</p>`}
+        <div class="card-footer">
+          <span>${n.kunci || n.bacaan}</span>
+          <span style="letter-spacing:0.2em; font-size:0.6rem;">|||| |||| | ||||</span>
+        </div>
+      </article>
+    `;
+      }).join("");
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById("toastMsg");
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 3200);
+    }
+
+    /* ========================================================
+       DETAIL NOTE READER MODAL
+       ======================================================== */
+    const modalRead = document.getElementById("modalReadOverlay");
+
+    function openNoteReader(idx) {
+      const n = notesList[idx];
+      if (!n) return;
+
+      document.getElementById("readModalTitleHeader").textContent = `${n.tema.toUpperCase()} // ${n.bacaan}`;
+
+      const body = document.getElementById("readModalBody");
+      body.innerHTML = `
+    <div class="read-top-meta">
+      <div style="font-family:var(--font-mono); font-size:0.75rem; color:#888;">
+        ${formatTgl(n.tanggal)} • TEMA: <b>${n.tema}</b>
+      </div>
+      <div class="read-bacaan-big">${n.bacaan}</div>
+      <div style="font-family:var(--font-serif); font-size:1.3rem; font-style:italic; font-weight:600;">
+        ${n.judul}
+      </div>
+    </div>
+
+    ${n.teks ? `
+      <div class="read-quote-box">
+        “${n.teks}”
+        <div style="font-family:var(--font-mono); font-size:0.8rem; font-style:normal; margin-top:0.4rem; color:var(--cyber-red);">
+          — ${n.kunci || n.bacaan}
+        </div>
+      </div>
+    ` : ""}
+
+    <div class="read-renungan-content">
+      ${(n.renungan || []).map(p => `<p>${p}</p>`).join("")}
+    </div>
+
+    ${(n.catatan && n.catatan.length) ? `
+      <div class="read-notes-bullet">
+        <h4>Doa Pribadi & Curahan Hati</h4>
+        <ul>
+          ${n.catatan.map(c => `<li>${c}</li>`).join("")}
+        </ul>
+      </div>
+    ` : ""}
+
+    <button type="button" class="btn-delete-entry" onclick="deleteNote(${idx})">
+      🗑️ Hapus Catatan Ini
+    </button>
+  `;
+
+      modalRead.classList.add("active");
+    }
+
+    function closeReadModal() {
+      modalRead.classList.remove("active");
+    }
+
+    function deleteNote(idx) {
+      const item = notesList[idx];
+      if (confirm(`Yakin ingin menghapus catatan "${item.judul}"?`)) {
+        notesList.splice(idx, 1);
+        persistNotes();
+        closeReadModal();
+        renderReceiptStamps();
+        renderNotesGrid();
+        showToast("[ OK ] Catatan telah dihapus.");
+      }
+    }
+
+    document.getElementById("btnCloseReadModal").addEventListener("click", closeReadModal);
+    modalRead.addEventListener("click", e => {
+      if (e.target === modalRead) closeReadModal();
+    });
+
+    /* ========================================================
+       DIRECT FORM SUBMISSION IN WRITE STUDIO
+       ======================================================== */
+    const sectionForm = document.getElementById("sectionNoteForm");
+    document.getElementById("secTanggal").value = new Date().toLocaleDateString("sv-SE");
+
+    sectionForm.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const tanggal = document.getElementById("secTanggal").value;
+      const tema = document.getElementById("secTema").value;
+      const bacaan = document.getElementById("secBacaan").value.trim();
+      const judul = document.getElementById("secJudul").value.trim();
+      const kunci = document.getElementById("secKunci").value.trim();
+      const teks = document.getElementById("secTeks").value.trim();
+      const renunganRaw = document.getElementById("secRenungan").value.trim();
+      const catatanRaw = document.getElementById("secCatatan").value.trim();
+
+      if (!bacaan || !judul || !renunganRaw) {
+        alert("Mohon lengkapi Bacaan, Judul, dan Isi Renungan.");
+        return;
+      }
+
+      const newEntry = {
+        tanggal: tanggal || new Date().toLocaleDateString("sv-SE"),
+        tema: tema || "Kasih",
+        bacaan: bacaan,
+        judul: judul,
+        renungan: renunganRaw.split(/\n\s*\n/).map(x => x.trim()).filter(Boolean),
+        catatan: catatanRaw.split(/\n+/).map(x => x.trim()).filter(Boolean)
+      };
+
+      if (teks) {
+        newEntry.kunci = kunci;
+        newEntry.teks = teks;
+      }
+
+      // Prepend to array
+      notesList.unshift(newEntry);
+      notesList.sort((a, b) => b.tanggal.localeCompare(a.tanggal));
+      persistNotes();
+
+      // Sync to local server if alive
+      try {
+        fetch('/api/renungan', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newEntry)
+        }).catch(() => { });
+      } catch (err) { }
+
+      // Reset form
+      sectionForm.reset();
+      document.getElementById("secTanggal").value = new Date().toLocaleDateString("sv-SE");
+
+      // Re-render
+      renderReceiptStamps();
+      renderNotesGrid();
+
+      // Show Toast & switch to Journal view
+      showToast("✨ Curhatan dan renungan berhasil disimpan ke jurnal! Amin.");
+      setTimeout(() => {
+        switchSection("sec-journal");
+      }, 400);
+    });
+
+    // Search input
+    document.getElementById("searchInput").addEventListener("input", e => {
+      searchQuery = e.target.value;
+      renderNotesGrid();
+    });
+
+    // Filter Chips
+    document.querySelectorAll(".chip-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".chip-btn").forEach(b => b.classList.remove("aktif"));
+        btn.classList.add("aktif");
+        activeFilter = btn.dataset.tema;
+        renderNotesGrid();
+      });
+    });
+
+    // 4 Service Strip Boxes
+    document.querySelectorAll(".service-box").forEach(box => {
+      box.addEventListener("click", () => {
+        const f = box.dataset.filter;
+        activeFilter = f;
+        document.querySelectorAll(".chip-btn").forEach(b => {
+          b.classList.toggle("aktif", b.dataset.tema.toLowerCase() === f.toLowerCase());
+        });
+        renderNotesGrid();
+      });
+    });
+
+    // Set current date in ticket
+    const today = new Date();
+    const pad = n => String(n).padStart(2, "0");
+    document.getElementById("ticketDateDisplay").textContent = `${today.getFullYear()}.${pad(today.getMonth() + 1)}.${pad(today.getDate())}`;
+
+    // Init
+    renderReceiptStamps();
+    renderNotesGrid();
+  </script>
+</body>
+
+</html>

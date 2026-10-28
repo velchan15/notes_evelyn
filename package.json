@@ -1,0 +1,10 @@
+{
+  "name": "notes-aku",
+  "version": "1.0.0",
+  "description": "Catatan Firman – Renungan dan Catatan Alkitab",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
+
